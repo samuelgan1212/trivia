@@ -3,11 +3,22 @@ import React, { Component } from 'react';
 
 
 class Question extends Component {
-  
+  constructor(props) {
+    super(props);
+    var Question =[
+      "What is the mc for demon slayer?",
+      "Who is the Fourth Hokage in Naruto?",
+      "What quirk does Bakugo have?"
+  ]
+    this.state = {question: Question[0]}
+  }
+  handleClick(){
+    var new_click_question =this.state.click_question + 1;
+  }
   render() {
     return (
       <div>
-        Add your QuestionText, Reset Button and AnswerButtons here.  
+        <html>{this.state.question}</html>
       </div>
     );
   }
