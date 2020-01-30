@@ -8,13 +8,12 @@ class App extends Component {
   render() {
     return (
       <div>
-      <div class="title">
-        <h1>Anime Trivia!</h1> 
-      </div>
-      <div class="Question">
-       
-      <Question/>
-      </div>
+        <div class="title">
+         <h1>Anime Trivia!</h1> 
+        </div>
+        <div class="Question">
+          <Question/>
+        </div>
       </div>
       
     );
