@@ -11,7 +11,7 @@ const data= [
         "question":"Who is the Fourth Hokage in Naruto?",
         "choice1":"hbhbhu ub7bb",
         "choice2":"Tanjiro Kamado",
-        "choice3":"Minato",
+        "choice3":"asdiuwe9dhweuydfhweilud",
         "choice4":"Martin",
         "answer":"Minato"
         

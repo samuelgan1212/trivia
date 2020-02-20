@@ -9,10 +9,18 @@ class App extends Component {
     super();
     this.state ={
       currentQuestion : 0,
+      currentchoice1:0,
+      currentchoice2:0,
+      currectchoice3:0,
+      currentchoice4:0,
     }
   }
   next = () => {
-    this.setState({currentQuestion : this.state.currentQuestion +1});
+    this.setState({currentQuestion: this.state.currentQuestion +1});
+    this.setState({currentchoice1 : this.state.currentchoice1 +1});
+    this.setState({currentchoice2 : this.state.currentchoice2 +1});
+    this.setState({currentchoice3 : this.state.currentchoice3 +1});
+    this.setState({currentchoice4 : this.state.currentchoice4 +1});
   }
   render() {
     
