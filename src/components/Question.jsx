@@ -6,6 +6,7 @@ import {data} from './data.js';
 class Question extends Component {
   constructor(props) {
       super(props);
+      /*
       class questions {
         constructor(question, choice1, choice2, choice3,choice4){
           this.question=question;
@@ -15,18 +16,26 @@ class Question extends Component {
           this.choice4=choice4;
         }
       }
-      this.state = {question: questions.question}
+      */
+     this.state = {
+      
+     }
+     // this.state = {question: questions.question}
   }
-    handleClick(){ 
-      var new_click_question = this.data[0];
-      this.setState(this.data[0].question);
+    handleClick =() =>{ 
+      this.props.next(1);
     }
     
     render() {
+      const {question, choice1, choice2, choice3, choice4} = this.props.question;
       return (
         <div>
-          <html>{this.state.question}</html>
-          <button onClick={()=> this.handleClick()}>Next!</button>
+          <html>{question}</html>
+          <button>{choice1} </button>
+          <button>{choice2} </button>
+          <button>{choice3}</button>
+          <button>{choice4}</button>
+          <button onClick={this.handleClick}>Next!</button>
         </div>
       );
     }

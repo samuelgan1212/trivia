@@ -16,3 +16,8 @@ body {
   justify-content: center;
   font-size:70px;
 }
+.choice1{
+  display:flex;
+  border:30px solid;
+  top: 80px;
+}
