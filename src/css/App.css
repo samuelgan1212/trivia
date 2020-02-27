@@ -16,8 +16,9 @@ body {
   justify-content: center;
   font-size:70px;
 }
-.choice1{
+#choice1.css{
   display:flex;
   border:30px solid;
   top: 80px;
+  padding:50px;
 }

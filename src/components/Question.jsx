@@ -18,28 +18,37 @@ class Question extends Component {
       }
       */
      this.state = {
-      
+        score:0,
      }
      // this.state = {question: questions.question}
   }
-    handleClick =() =>{ 
+    handleClick =(event) =>{ 
+      event.stopPropagation();
       this.props.next(1);
+      // this.props.Choicepick;
+    }
+    answerClick =(index) =>{
+      this.props.Choicepick(index);
     }
     
     render() {
-      const {question, choice1, choice2, choice3, choice4} = this.props.question;
+      
+      const {question, choice1, choice2, choice3, choice4,score} = this.props.question;
       return (
         <div>
           <html>{question}</html>
-          <button>{choice1} </button>
-          <button>{choice2} </button>
-          <button>{choice3}</button>
-          <button>{choice4}</button>
-          <button onClick={this.handleClick}>Next!</button>
+
+          <html>score:{this.props.score}</html>
+          <button id="correctans"onClick={()=> this.answerClick(0)}>{choice1} </button>
+          <button id="correctans"onClick={()=> this.answerClick(1)}>{choice2} </button>
+          <button id="correctans"onClick={()=> this.answerClick(2)}>{choice3}</button>
+          <button id="correctans"onClick={()=> this.answerClick(3)} >{choice4}</button>
+          <button id="NextButton"onClick={this.handleClick}>Next!</button>
         </div>
       );
+      
+           }
     }
-}
 
 
 export default Question;
